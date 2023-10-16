@@ -16,18 +16,20 @@ let nameHero;
 let questHero;
 let hero;
 let i;
+let age;
 
 for(i=0;i<numberHeros;i++){
    nameHero = heroNames[ getRandomInt(heroNames.length) ]
    questHero = getRandomInt(4)
+   age = getRandomInt(120)+1
    if (questHero==0){
-      hero = new Ninja(nameHero)
+      hero = new Ninja(nameHero, age)
    } else if (questHero == 1) {
-      hero = new Monk(nameHero);
+      hero = new Monk(nameHero, age);
    } else if (questHero == 2) {
-      hero = new Wizard(nameHero);
+      hero = new Wizard(nameHero, age);
    } else{
-      hero = new Warrior(nameHero);
+      hero = new Warrior(nameHero, age);
    }
    heros[i] = hero;
 }
